@@ -1,0 +1,12 @@
+Walkthrough Video URL:
+
+[Replace this with your Loom or YouTube link after recording]
+
+Video should cover (3-5 minutes):
+1. Login with demo account (alice)
+2. Create a new document
+3. Demonstrate rich text formatting (bold, italic, headings, lists)
+4. Upload a .txt or .md file to import
+5. Share document with bob, show permission levels
+6. Log in as bob to show shared document in sidebar
+7. Briefly explain architecture decisions and what was deprioritized

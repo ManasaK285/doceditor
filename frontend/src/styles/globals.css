@@ -1,0 +1,159 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink: #1a1a1a;
+  --ink-2: #3d3d3d;
+  --ink-3: #6b6b6b;
+  --ink-4: #999;
+  --paper: #fafaf8;
+  --paper-2: #f3f2ef;
+  --paper-3: #eae9e5;
+  --border: #e2e1dd;
+  --border-2: #d4d3ce;
+  --accent: #2d6a4f;
+  --accent-light: #e8f5ee;
+  --accent-hover: #235c43;
+  --danger: #c0392b;
+  --danger-light: #fdf0ee;
+  --warning: #d97706;
+  --info: #2563eb;
+  --info-light: #eff6ff;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadow: 0 4px 12px rgba(0,0,0,0.08), 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-lg: 0 12px 32px rgba(0,0,0,0.12), 0 4px 8px rgba(0,0,0,0.06);
+  --radius: 8px;
+  --radius-sm: 5px;
+  --radius-lg: 12px;
+  --font-body: 'DM Sans', sans-serif;
+  --font-display: 'Fraunces', serif;
+  --font-mono: 'DM Mono', monospace;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: var(--font-body);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  border: none;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  text-decoration: none;
+}
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover:not(:disabled) { background: var(--accent-hover); }
+.btn-secondary { background: var(--paper-2); color: var(--ink-2); border: 1px solid var(--border); }
+.btn-secondary:hover:not(:disabled) { background: var(--paper-3); }
+.btn-ghost { background: transparent; color: var(--ink-3); }
+.btn-ghost:hover:not(:disabled) { background: var(--paper-2); color: var(--ink); }
+.btn-danger { background: var(--danger-light); color: var(--danger); border: 1px solid #f5c6c2; }
+.btn-danger:hover:not(:disabled) { background: #fad7d4; }
+.btn-sm { padding: 5px 10px; font-size: 13px; }
+.btn-icon { padding: 7px; border-radius: var(--radius-sm); }
+
+/* Inputs */
+.input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: var(--ink);
+  background: #fff;
+  transition: border-color 0.15s;
+  outline: none;
+}
+.input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-light); }
+.input::placeholder { color: var(--ink-4); }
+
+/* Cards */
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.badge-owner { background: var(--accent-light); color: var(--accent); }
+.badge-edit  { background: #e8f0fe; color: #1a56db; }
+.badge-view  { background: var(--paper-2); color: var(--ink-3); }
+
+/* Toast */
+.toast-container {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 9999;
+}
+.toast {
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  font-weight: 500;
+  box-shadow: var(--shadow-lg);
+  animation: slideIn 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 240px;
+  max-width: 380px;
+}
+.toast-success { background: var(--accent); color: #fff; }
+.toast-error   { background: var(--danger); color: #fff; }
+.toast-info    { background: var(--ink); color: #fff; }
+
+@keyframes slideIn {
+  from { transform: translateX(20px); opacity: 0; }
+  to   { transform: translateX(0);    opacity: 1; }
+}
+
+/* Spinner */
+.spinner {
+  width: 20px; height: 20px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Divider */
+.divider { height: 1px; background: var(--border); margin: 12px 0; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--ink-4); }
