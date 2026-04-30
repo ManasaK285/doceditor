@@ -18,6 +18,12 @@
 | `SUBMISSION.md` | This file |
 | `VIDEO.txt` | Walkthrough video URL |
 
+## Video Note
+A screen recording walkthrough is included. Audio was not recorded 
+due to microphone issues. The video covers all core functionality 
+end to end. Happy to walk through implementation decisions on a 
+live call if needed.
+
 ---
 
 ## Live Deployment
