@@ -22,8 +22,8 @@
 
 ## Live Deployment
 
-- **Frontend:** [add Vercel URL]
-- **Backend API:** [add Railway/Render URL]
+- **Frontend:** https://doceditor-taxu.onrender.com
+- **Backend API:** https://doceditor-v2xu.onrender.com
 
 ---
 
