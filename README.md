@@ -4,7 +4,8 @@ A lightweight collaborative document editor built for the Ajaia LLC Technical Pr
 
 ## Live Demo
 
-> Deploy URL: [add after deployment]
+> Frontend: https://doceditor-taxu.onrender.com
+> Backend: https://doceditor-v2xu.onrender.com
 
 **Demo Accounts** (all use password `demo1234`):
 | Username | Email |
